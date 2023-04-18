@@ -26,8 +26,7 @@ class_list = data.split("\n")
 
 count=0
 
-area1=[(252,370),(206,372),(480,476),(513,466)]
-area2=[(201,378),(180,383),(433,482),(465,479)]
+
 while True:    
     ret,frame = cap.read()
     if not ret:
@@ -65,10 +64,7 @@ while True:
         
             
 
-    cv2.polylines(frame,[np.array(area1,np.int32)],True,(255,0,0),2)
-    cv2.polylines(frame,[np.array(area2,np.int32)],True,(255,0,0),2)
-    cv2.putText(frame,('1'),(338,409),cv2.FONT_HERSHEY_COMPLEX,(0.6),(0,0,255),1)
-    cv2.putText(frame,('2'),(284,428),cv2.FONT_HERSHEY_COMPLEX,(0.6),(0,0,255),1)
+    
 
 
     cv2.imshow("RGB", frame)
