@@ -41,7 +41,7 @@ while True:
 #    frame=cv2.flip(frame,1)
     results=model.predict(frame)
  #   print(results)
-    a=results[0].boxes.boxes
+    a=results[0].boxes.data
     px=pd.DataFrame(a).astype("float")
 #    print(px)
     list=[]
